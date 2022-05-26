@@ -121,7 +121,7 @@ module.exports = {
         '4xl': '2560px',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: [`"${FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
         headings: [`"${FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
@@ -135,7 +135,6 @@ module.exports = {
 
         'spin-reverse': 'spin 1s reverse linear infinite',
       },
-
       colors: {
         primary: primaryColors[PRIMARY_COLOR],
         'dark-backdrop': 'rgba(0, 0, 0, 0.8)',

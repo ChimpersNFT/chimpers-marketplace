@@ -8,6 +8,10 @@
   }
 }
 
+html, button {
+  text-transform: uppercase !important;
+}
+
 input[type=range] {
   -webkit-appearance: none;
   @apply bg-primary-700 rounded-full h-3;
