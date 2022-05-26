@@ -13,6 +13,14 @@ html, button {
   font-size: .8em;
 }
 
+.bg-white, .bg-gray-300, .bg-backdrop { 
+  background-color: #fffef3 !important;
+}
+
+.bg-backdrop {
+  opacity: 0.8;
+}
+
 .capitalize {
   text-transform: uppercase;
 }
