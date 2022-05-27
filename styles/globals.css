@@ -8,7 +8,7 @@
   }
 
   :not(hr):not(.col-span-3).border-gray-300, .btn-primary-outline, .btn-primary-fill, .group, .rounded-2xl, :not(img).rounded-full,
-  .grid {
+  :not(article) > :not(.gap-4).grid {
     @apply pixel-borders--2;
     border-width: 3px !important;
     border-radius: 15px !important;
