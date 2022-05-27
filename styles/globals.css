@@ -6,11 +6,36 @@
   .reservoir-h1, .reservoir-h2, .reservoir-h3, .reservoir-h4, .reservoir-h5, .reservoir-h6 {
     @apply font-headings;
   }
+
+  :not(hr):not(.col-span-3).border-gray-300, .btn-primary-outline, .btn-primary-fill, .group, .rounded-2xl, :not(img).rounded-full,
+  .grid {
+    @apply pixel-borders--2;
+    border-width: 3px !important;
+    border-radius: 15px !important;
+  }
+}
+
+.grid { padding: 2px; }
+
+.group { padding: 0; }
+
+.border-gray-300 { border: none; }
+
+*:focus { outline-width: 0 !important; }
+
+.shadow-md { 
+  background-color: transparent; 
+  border: 0;
+}
+
+article .bg-primary-100 {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 html, button {
   text-transform: uppercase !important;
-  font-size: .8em;
+  font-size: .75em;
 }
 
 .bg-white, .bg-gray-300, .bg-backdrop { 
