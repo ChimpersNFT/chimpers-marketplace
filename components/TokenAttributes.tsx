@@ -8,6 +8,21 @@ type Props = {
   >[0]['token']
 }
 
+function getColor(attr: string | undefined) {
+  switch (attr?.toLowerCase()) {
+    case "type": return "purple";
+    case "head": return "lime";
+    case "background": return "cyan";
+    case "eyes": return "yellow";
+    case "face extra": return "sky";
+    case "legendary": return "indigo";
+    case "outfit": return "rose";
+    case "eyewear": return "amber";
+    case "back": return "pink";
+    case "mouth": return "emerald";
+  }
+}
+
 const TokenAttributes = ({ token }: Props) => {
   return (
     <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2">
@@ -28,8 +43,7 @@ const TokenAttributes = ({ token }: Props) => {
                   {key}
                 </p>
                 <p
-                  className="reservoir-subtitle truncate bg-primary-100 p-3 text-center capitalize dark:bg-primary-900 dark:text-white
-                  "
+                  className={`reservoir-subtitle truncate rounded-b-xl bg-${getColor(key)}-100 p-3 text-center capitalize dark:text-white text-xs`}
                   title={value}
                 >
                   {value}
