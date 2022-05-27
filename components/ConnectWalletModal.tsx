@@ -80,7 +80,7 @@ export const Wallets: FC = () => {
     <div className="grid">
       {connectors.map((connector) => (
         <button
-          className="rounded-2xl py-4 hover:bg-neutral-100 dark:hover:bg-neutral-900 md:rounded-none"
+          className="rounded-2xl py-4 hover:bg-neutral-100 dark:hover:bg-neutral-900 md:rounded-none border"
           disabled={!connector.ready}
           key={connector.id}
           onClick={() => connect(connector)}
@@ -92,7 +92,7 @@ export const Wallets: FC = () => {
               connector?.id === 'injected' ? 'hidden md:flex' : ''
             }`}
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-xs">
               {Boolean(wallets[connector.id]?.icon) && (
                 <img src={wallets[connector.id]?.icon} alt="" className="w-8" />
               )}

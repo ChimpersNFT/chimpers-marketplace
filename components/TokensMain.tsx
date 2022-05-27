@@ -67,56 +67,6 @@ const TokensMain: FC<Props> = ({ collectionId, fallback, setToast }) => {
   const bannerImage = (envBannerImage ||
     collection?.data?.collection?.metadata?.bannerImageUrl) as string
 
-  async function refreshCollection(collectionId: string | undefined) {
-    function handleError(message?: string) {
-      setToast({
-        kind: 'error',
-        message: message || 'Request to refresh collection was rejected.',
-        title: 'Refresh collection failed',
-      })
-
-      setRefreshLoading(false)
-    }
-
-    try {
-      if (!collectionId) throw new Error('No collection ID')
-
-      const data = {
-        collection: collectionId,
-      }
-
-      const pathname = `${PROXY_API_BASE}/collections/refresh/v1`
-
-      setRefreshLoading(true)
-
-      const res = await fetch(pathname, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-
-      if (!res.ok) {
-        const json = await res.json()
-        handleError(json?.message)
-        return
-      }
-
-      setToast({
-        kind: 'success',
-        message: 'Request to refresh collection was accepted.',
-        title: 'Refresh collection',
-      })
-    } catch (err) {
-      handleError()
-      console.error(err)
-      return
-    }
-
-    setRefreshLoading(false)
-  }
-
   const title = metaTitle ? (
     <title>{metaTitle}</title>
   ) : (
@@ -183,18 +133,6 @@ const TokensMain: FC<Props> = ({ collectionId, fallback, setToast }) => {
               ) : (
                 <SortMenu setSize={tokens.setSize} />
               )}
-              <button
-                className="btn-primary-outline dark:border-neutral-600 dark:text-white dark:ring-primary-900 dark:focus:ring-4"
-                title="Refresh collection"
-                disabled={refreshLoading}
-                onClick={() => refreshCollection(collectionId)}
-              >
-                <FiRefreshCcw
-                  className={`h-5 w-5 ${
-                    refreshLoading ? 'animate-spin-reverse' : ''
-                  }`}
-                />
-              </button>
             </div>
           </div>
           <AttributesFlex className="mb-10 flex flex-wrap gap-3" />

@@ -22,9 +22,9 @@ const Steps: FC<Props> = ({ steps }) => {
             ) : status === 'complete' ? (
               <HiCheckCircle className="mx-auto -mt-1 h-10 w-10 flex-none text-green-600" />
             ) : firstIncomplete === index ? (
-              <CgSpinner className="mr-1 ml-1 -mt-0.5 h-8 w-8 flex-none animate-spin text-black dark:text-white" />
+              <CgSpinner className="mr-1 ml-1 -mt-0.5 h-9 w-9 flex-none animate-spin text-black dark:text-white" />
             ) : (
-              <div className="reservoir-h6 mr-1 ml-1 flex h-8 w-8 items-center justify-center rounded-full text-center font-headings ring-2 ring-inset ring-neutral-900 dark:text-white  dark:ring-white">
+              <div className="reservoir-h6 mr-1 ml-1 flex h-9 w-9 items-center justify-center rounded-full text-center font-headings dark:text-white  dark:ring-white">
                 <div>{index + 1}</div>
               </div>
             )}

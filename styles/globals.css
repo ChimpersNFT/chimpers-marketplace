@@ -33,7 +33,7 @@ article .bg-primary-100 {
   border-bottom-left-radius: 10px;
 }
 
-html, button {
+html, button, input, select {
   text-transform: uppercase !important;
   font-size: .75em;
 }

@@ -72,7 +72,7 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
         <div className="mb-1 flex border-t border-[rgba(0,0,0,0.05)] p-3 dark:border-[rgba(255,255,255,0.1)]">
           <div className="relative mr-2 h-8 w-8 overflow-hidden">
             <img
-              className="border-border-light dark: relative h-full w-full overflow-hidden rounded-full border object-cover after:absolute after:top-0 after:bottom-0 after:left-0  after:right-0 after:rounded-full after:bg-black after:content-[''] dark:border-[rgba(30,30,30,1)]"
+              className="border-border-light dark: relative h-full w-full overflow-hidden rounded-full object-cover after:absolute after:top-0 after:bottom-0 after:left-0  after:right-0 after:rounded-full after:bg-black after:content-[''] dark:border-[rgba(30,30,30,1)]"
               src={`https://api.reservoir.tools/redirect/collections/${token?.token?.collection?.id}/image/v1`}
             />
           </div>
