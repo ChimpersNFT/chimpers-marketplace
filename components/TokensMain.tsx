@@ -163,7 +163,7 @@ const TokensMain: FC<Props> = ({ collectionId, fallback, setToast }) => {
                       {formatNumber(stats?.data?.stats?.tokenCount)} items
                     </div>
 
-                    <div className="h-9 w-px bg-gray-300 dark:bg-neutral-600"></div>
+                    <div className="h-9 w-px bg-white dark:bg-neutral-600"></div>
                     <div>
                       <FormatEth
                         amount={stats?.data?.stats?.market?.floorAsk?.price}
