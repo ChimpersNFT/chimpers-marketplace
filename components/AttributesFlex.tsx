@@ -47,7 +47,8 @@ const AttributesFlex: FC<Props> = ({ className }) => {
         >
           <div className="reservoir-label-l flex items-center justify-between gap-1.5 dark:text-white ">
             <p className="capitalize">{key}</p>
-            <p>{value}</p>
+            <div className="h-6 w-px bg-gray-600 dark:bg-neutral-600"></div>
+            <p className="ml-1">{value}</p>
           </div>
           <button
             className="ml-4"
