@@ -7,8 +7,8 @@
     @apply font-headings;
   }
 
-  :not(hr):not(.col-span-3).border-gray-300, .btn-primary-outline, .btn-primary-fill, .group, .rounded-2xl, :not(img).rounded-full,
-  :not(article) > :not(.gap-4).grid {
+  :not(hr):not(.col-span-3).border-gray-300, .btn-primary-outline, .btn-primary-fill, .group, .rounded-2xl, :not(span):not(img).rounded-full,
+  :not(article):not(.mb-10):not(.justify-between) > :not(.gap-4).grid, .border {
     @apply pixel-borders--2;
     border-width: 3px !important;
     border-radius: 15px !important;
