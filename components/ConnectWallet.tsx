@@ -43,7 +43,7 @@ const ConnectWallet: FC = () => {
       <DropdownMenu.Content
         align="end"
         sideOffset={6}
-        className="w-48 space-y-1 rounded bg-white px-1.5 py-2 shadow-md radix-side-bottom:animate-slide-down  dark:bg-neutral-900 md:w-56"
+        className="space-y-1 rounded bg-white px-1.5 py-2 shadow-md radix-side-bottom:animate-slide-down dark:bg-neutral-900"
       >
         <div className="group flex w-full items-center justify-between rounded px-4 py-3 outline-none transition">
           <span>Balance </span>

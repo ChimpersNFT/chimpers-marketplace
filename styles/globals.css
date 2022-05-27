@@ -8,7 +8,7 @@
   }
 
   :not(hr):not(.col-span-3).border-gray-300, .btn-primary-outline, .btn-primary-fill, .group, .rounded-2xl, :not(span):not(img).rounded-full,
-  :not(article):not(.mb-10):not(.justify-between) > :not(.gap-4).grid, .border {
+  main.grid, .col-span-full.grid, .border {
     @apply pixel-borders--2;
     border-width: 3px !important;
     border-radius: 15px !important;
@@ -17,7 +17,7 @@
 
 .grid { padding: 2px; }
 
-.group { padding: 0; }
+.masonry-grid_column .group { padding: 0; }
 
 .border-gray-300 { border: none; }
 
