@@ -60,7 +60,7 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
                 key={`${token?.collection?.name}${idx}`}
                 href={`/${token?.contract}/${token?.tokenId}`}
               >
-                <a className="group relative mb-6 grid transform-gpu self-start overflow-hidden border border-[#D4D4D4] bg-white transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-0 dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600">
+                <a className="group bg-black relative mb-6 grid transform-gpu self-start overflow-hidden border border-[#D4D4D4] transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-0 dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600">
                   {token?.source && (
                     <img
                       className="absolute top-4 left-4 h-8 w-8"
@@ -108,30 +108,33 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
                     </div>
                   )}
 
-                  <p
-                    className="reservoir-subtitle mb-3 overflow-hidden truncate px-4 pt-4 dark:text-white lg:pt-3"
-                    title={token?.name || token?.tokenId}
-                  >
-                    {token?.name || `#${token?.tokenId}`}
-                  </p>
-                  <div className="flex items-center justify-between px-4 pb-4 lg:pb-3">
-                    <div>
-                      <div className="reservoir-subtitle text-xs text-gray-400">
-                        Price
+                  <div
+                    className="bg-white">
+                    <p
+                      className="reservoir-subtitle mb-3 overflow-hidden truncate px-4 pt-4 dark:text-white lg:pt-3"
+                      title={token?.name || token?.tokenId}
+                    >
+                      {token?.name || `#${token?.tokenId}`}
+                    </p>
+                    <div className="flex items-center justify-between px-4 pb-4 lg:pb-3">
+                      <div>
+                        <div className="reservoir-subtitle text-xs text-gray-400">
+                          Price
+                        </div>
+                        <div className="reservoir-h6 dark:text-white">
+                          <FormatEth
+                            amount={token?.floorAskPrice}
+                            logoWidth={7}
+                          />
+                        </div>
                       </div>
-                      <div className="reservoir-h6 dark:text-white">
-                        <FormatEth
-                          amount={token?.floorAskPrice}
-                          logoWidth={7}
-                        />
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="reservoir-subtitle text-xs text-gray-400">
-                        Offer
-                      </div>
-                      <div className="reservoir-h6 dark:text-white">
-                        <FormatWEth amount={token?.topBidValue} logoWidth={7} />
+                      <div className="text-right">
+                        <div className="reservoir-subtitle text-xs text-gray-400">
+                          Offer
+                        </div>
+                        <div className="reservoir-h6 dark:text-white">
+                          <FormatWEth amount={token?.topBidValue} logoWidth={7} />
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -7,7 +7,7 @@
     @apply font-headings;
   }
 
-  :not(hr):not(.col-span-3).border-gray-300, .btn-primary-outline, .btn-primary-fill, .group, .rounded-2xl, :not(span):not(img).rounded-full,
+  :not(hr):not(.col-span-3).border-gray-300, .btn-primary-outline, .btn-primary-fill, .group, :not(span):not(img).rounded-full,
   main.grid, .col-span-full.grid, .border {
     @apply pixel-borders--2;
     border-width: 3px !important;
