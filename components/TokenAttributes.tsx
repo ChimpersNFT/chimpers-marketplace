@@ -93,7 +93,7 @@ const TokenAttribute: FC<TokenAttributeProps> = ({
         </div>
         <div className="flex justify-between gap-1 text-xs dark:text-neutral-300">
           <span>
-            {formatNumber(attribute.tokenCount)} ({attributeRarity}%) have this
+            {formatNumber(attribute.tokenCount)} ({attributeRarity}%)
           </span>
           <span>floor price</span>
         </div>
