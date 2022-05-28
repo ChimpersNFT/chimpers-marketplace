@@ -113,7 +113,6 @@ const Navbar: FC = () => {
           {filterComponent && filterComponent}
         </div>
       </div>
-      <AudioPlayer></AudioPlayer>
       <HamburgerMenu externalLinks={externalLinks} />
       <div className="z-10 ml-auto hidden shrink-0 md:block">
         <ConnectWallet />
