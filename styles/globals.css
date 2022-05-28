@@ -23,6 +23,16 @@
 
 *:focus { outline-width: 0 !important; }
 
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
+
 .shadow-md { 
   background-color: transparent; 
   border: 0;

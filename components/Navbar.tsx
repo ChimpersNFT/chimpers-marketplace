@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import { paths } from '@reservoir0x/client-sdk'
 import setParams from 'lib/params'
 import NavbarLogo from 'components/navbar/NavbarLogo'
+import AudioPlayer from './AudioPlayer'
 
 const SearchCollections = dynamic(() => import('./SearchCollections'))
 const CommunityDropdown = dynamic(() => import('./CommunityDropdown'))
@@ -112,6 +113,7 @@ const Navbar: FC = () => {
           {filterComponent && filterComponent}
         </div>
       </div>
+      <AudioPlayer></AudioPlayer>
       <HamburgerMenu externalLinks={externalLinks} />
       <div className="z-10 ml-auto hidden shrink-0 md:block">
         <ConnectWallet />
