@@ -178,18 +178,6 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                     ) : (
                       <SortMenu setSize={tokens.setSize} />
                     )}
-                    <button
-                      className="btn-primary-outline dark:border-neutral-600 dark:text-white dark:ring-primary-900 dark:focus:ring-4"
-                      title="Refresh collection"
-                      disabled={refreshLoading}
-                      onClick={() => refreshCollection(id)}
-                    >
-                      <FiRefreshCcw
-                        className={`h-5 w-5 ${
-                          refreshLoading ? 'animate-spin-reverse' : ''
-                        }`}
-                      />
-                    </button>
                   </div>
                 </div>
                 <div className="mb-10 flex items-center justify-between">
@@ -235,7 +223,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           </Tabs.Content>
           <Tabs.Content
             value="activity"
-            className="col-span-full mx-[25px] grid lg:col-start-2 lg:col-end-[-2]"
+            className="col-span-full mx-[25px] lg:col-start-2 lg:col-end-[-2]"
           >
             <CollectionActivityTable collection={collection.data?.collection} />
           </Tabs.Content>

@@ -42,6 +42,21 @@ type TokenAttributeProps = {
   collectionTokenCount?: string
 }
 
+function getColor(attr: string | undefined) {
+  switch (attr?.toLowerCase()) {
+    case "type": return "purple";
+    case "head": return "lime";
+    case "background": return "cyan";
+    case "eyes": return "yellow";
+    case "face extra": return "sky";
+    case "legendary": return "indigo";
+    case "outfit": return "rose";
+    case "eyewear": return "amber";
+    case "back": return "pink";
+    case "mouth": return "emerald";
+  }
+}
+
 const TokenAttribute: FC<TokenAttributeProps> = ({
   attribute,
   collectionId,
@@ -61,7 +76,7 @@ const TokenAttribute: FC<TokenAttributeProps> = ({
         `attributes[${attribute.key}]`
       )}=${formatUrl(`${attribute.value}`)}`}
     >
-      <a className="rounded-lg bg-neutral-100 px-4 py-3 ring-inset ring-blue-600 transition-colors	hover:bg-neutral-300 focus-visible:outline-none focus-visible:ring-2 dark:bg-neutral-800 dark:hover:bg-neutral-600">
+      <a className={`rounded-lg border bg-${getColor(attribute.key)}-100 px-4 py-3 ring-inset ring-blue-600 transition-colors	hover:bg-neutral-300 focus-visible:outline-none focus-visible:ring-2 dark:bg-neutral-800 dark:hover:bg-neutral-600`}>
         <div className="text-sm text-primary-700 dark:text-primary-300">
           {attribute.key}
         </div>
