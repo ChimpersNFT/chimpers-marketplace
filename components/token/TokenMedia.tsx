@@ -15,7 +15,7 @@ const TokenMedia: FC<Props> = ({ details, tokenOpenSea }) => {
   const token = details.data?.tokens?.[0]
 
   return (
-    <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2 border bg-black">
+    <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2 border">
       <Script
         type="module"
         src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
