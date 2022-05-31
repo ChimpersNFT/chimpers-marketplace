@@ -89,7 +89,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
 
                 <Link href={`/address/${accountData.address}`}>
                   <a className="group reservoir-label-l flex w-full cursor-pointer items-center justify-between rounded border-b border-neutral-300 p-4 text-[#4B5563] outline-none transition hover:bg-neutral-100 hover:text-[#1F2937] focus:bg-neutral-100 dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600">
-                    Portfolio
+                    My Chimpers
                   </a>
                 </Link>
 

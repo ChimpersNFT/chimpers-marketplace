@@ -29,50 +29,52 @@ const ConnectWallet: FC = () => {
   if (!account) return <ConnectWalletModal />
 
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger className="btn-primary-outline ml-auto rounded-full border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4">
-        <EthAccount
-          address={account.address}
-          ens={{
-            avatar: ensAvatar,
-            name: ensName,
-          }}
-        />
-      </DropdownMenu.Trigger>
-
-      <DropdownMenu.Content
-        align="end"
-        sideOffset={6}
-        className="space-y-1 px-1.5 py-2 radix-side-bottom:animate-slide-down dark:bg-neutral-900"
-      >
-        <div className="group bg-white flex w-full items-center justify-between rounded px-4 py-3 outline-none transition">
-          <span>Balance </span>
-          <span>
-            {account.address && <Balance address={account.address} />}
-          </span>
-        </div>
+    <div className="flex gap-2">
+      {account && (
         <Link href={`/address/${account.address}`}>
-          <DropdownMenu.Item asChild>
-            <a className="group bg-white flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-              Portfolio
-            </a>
-          </DropdownMenu.Item>
+          <a className="border flex cursor-pointer items-center p-4 outline-none transition hover:bg-neutral-100 hover:text-[#1F2937] focus:bg-neutral-100 dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600">
+            My Chimpers 
+          </a>
         </Link>
-        <DropdownMenu.Item asChild>
-          <button
-            key={wallet.id}
-            onClick={() => {
-              dispatch({ type: 'CONNECT_WALLET', payload: false })
-              disconnect()
+      )}
+      <DropdownMenu.Root>
+        <DropdownMenu.Trigger className="btn-primary-outline ml-auto rounded-full border-transparent bg-gray-100 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4">
+          <EthAccount
+            address={account.address}
+            ens={{
+              avatar: ensAvatar,
+              name: ensName,
             }}
-            className="group bg-white flex w-full cursor-pointer items-center justify-between gap-3 rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-          >
-            <span>Disconnect</span>
-            <HiOutlineLogout className="h-6 w-7" />
-          </button>
-        </DropdownMenu.Item>
-      </DropdownMenu.Content>
-    </DropdownMenu.Root>
+          />
+        </DropdownMenu.Trigger>
+
+        <DropdownMenu.Content
+          align="end"
+          sideOffset={6}
+          className="space-y-1 px-1.5 py-2 radix-side-bottom:animate-slide-down dark:bg-neutral-900"
+        >
+          <div className="group bg-white flex w-full items-center justify-between rounded px-4 py-3 outline-none transition">
+            <span>Balance </span>
+            <span>
+              {account.address && <Balance address={account.address} />}
+            </span>
+          </div>
+          <DropdownMenu.Item asChild>
+            <button
+              key={wallet.id}
+              onClick={() => {
+                dispatch({ type: 'CONNECT_WALLET', payload: false })
+                disconnect()
+              }}
+              className="group bg-white flex w-full cursor-pointer items-center justify-between gap-3 rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+            >
+              <span>Disconnect</span>
+              <HiOutlineLogout className="h-6 w-7" />
+            </button>
+          </DropdownMenu.Item>
+        </DropdownMenu.Content>
+      </DropdownMenu.Root>
+    </div>
   )
 }
 
