@@ -23,7 +23,7 @@
 
 *:focus { outline-width: 0 !important; }
 
-audio::-webkit-media-controls-timeline,
+/* audio::-webkit-media-controls-timeline,
 video::-webkit-media-controls-timeline {
     display: none;
 }
@@ -31,8 +31,11 @@ video::-webkit-media-controls-timeline {
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
     display: none;
+} */
+audio::-webkit-media-controls-play-button,
+  audio::-webkit-media-controls-panel {
+  @apply bg-white;
 }
-
 .shadow-md { 
   background-color: transparent; 
   border: 0;
