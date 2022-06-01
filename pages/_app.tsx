@@ -69,6 +69,7 @@ const client = createClient({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GlobalProvider>
+      <AudioPlayer></AudioPlayer>
       <Provider client={client}>
         <AnalyticsProvider>
           <Component {...pageProps} />

@@ -36,6 +36,22 @@ audio::-webkit-media-controls-play-button,
   audio::-webkit-media-controls-panel {
   @apply bg-white;
 }
+
+.audio {
+  @apply h-12 w-12;
+  background-image: url('/no-music.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.audio.playing {
+  background-image: url('/music.png');
+}
+
+.audio:hover {
+  border-color: transparent transparent transparent #404040;
+}
+
 .shadow-md { 
   background-color: transparent; 
   border: 0;
