@@ -14,21 +14,26 @@ const AudioPlayer: FC = () => {
   const music = useRef<HTMLAudioElement | undefined>(
     typeof Audio !== "undefined" ? new Audio("../chimpers.wav") : undefined
   );
+  
+  music.current?.addEventListener('ended', function () {
+    this.currentTime = 0;
+    this.play();
+  }, false);
 
   return (
-      <button className="audio absolute z-[1000] right-9 top-7 mt-0.5 mr-1 hidden md:block border p-7"
-        onClick={(e) => {
-          const button = (e.target as HTMLButtonElement);
-          if (button.classList.contains("playing")) {
-            music.current?.pause();
-            button.classList.remove("playing");
-          } else {
-            music.current?.play();
-            button.classList.add("playing")
-          }
-        }}
-      >
-      </button>
+    <button className="audio absolute z-[1000] right-9 top-7 mt-0.5 mr-1 hidden md:block border p-7"
+      onClick={(e) => {
+        const button = (e.target as HTMLButtonElement);
+        if (button.classList.contains("playing")) {
+          music.current?.pause();
+          button.classList.remove("playing");
+        } else {
+          music.current?.play();
+          button.classList.add("playing")
+        }
+      }}
+    >
+    </button>
   )
 }
 
