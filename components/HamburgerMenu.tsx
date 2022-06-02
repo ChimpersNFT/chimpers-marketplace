@@ -14,6 +14,7 @@ import {
 import { Balance } from './ConnectWallet'
 import { Wallets } from './ConnectWalletModal'
 import EthAccount from './EthAccount'
+import ThemeSwitcher from './ThemeSwitcher'
 
 type Props = {
   externalLinks: {
@@ -52,7 +53,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
           </div>
         ) : (
           <>
-            {hasExternalLinks && (
+            {hasExternalLinks && (  
               <div className="grid">
                 {externalLinks.map(({ name, url }) => (
                   <a
@@ -66,8 +67,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                 ))}
               </div>
             )}
-            {accountData ? (
-              <>
+            {accountData && (
                 <div className="reservoir-label-l flex items-center justify-center border-b border-neutral-300 bg-neutral-100 p-4 text-[#4B5563] hover:text-[#1F2937] dark:border-neutral-600 dark:bg-[#0b131f] dark:text-white dark:hover:bg-neutral-600">
                   <EthAccount
                     address={accountData.address}
@@ -77,8 +77,14 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                     }}
                   />
                 </div>
+              )}
 
-                <div className="reservoir-label-l flex items-center justify-between border-b border-neutral-300 p-4 text-[#4B5563] hover:text-[#1F2937] dark:border-neutral-600 dark:text-white dark:border-white">
+            <ThemeSwitcher></ThemeSwitcher>
+
+
+            {accountData ? (
+              <>
+              <div className="reservoir-label-l flex items-center justify-between border p-4 text-[#4B5563] hover:text-[#1F2937] dark:border-neutral-600 dark:text-white dark:border-white">
                   <span>Balance </span>
                   <span>
                     {accountData.address && (
