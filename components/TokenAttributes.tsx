@@ -82,7 +82,7 @@ const TokenAttribute: FC<TokenAttributeProps> = ({
         </div>
         <div className="mb-1 mt-2 flex justify-between gap-1 text-sm text-black">
           <span
-            className="reservoir-h6 text-black truncate"
+            className="text-black truncate font-bold"
             title={attribute.value}
           >
             {attribute.value}
