@@ -14,7 +14,7 @@ import { HiOutlineLogout } from 'react-icons/hi'
 import FormatEth from './FormatEth'
 import ConnectWalletModal from './ConnectWalletModal'
 import { GlobalContext } from 'context/GlobalState'
-import ThemeSwitcher from './ThemeSwitcher'
+import itcher from './ThemeSwitcher'
 
 const ConnectWallet: FC = () => {
   const { data: account, isLoading } = useAccount()
@@ -31,7 +31,6 @@ const ConnectWallet: FC = () => {
 
   return (
     <div className="flex gap-2">
-      <ThemeSwitcher></ThemeSwitcher>
       {account && (
         <Link href={`/address/${account.address}`}>
           <a className="border flex cursor-pointer items-center p-4 outline-none transition hover:bg-neutral-100 hover:text-[#1F2937]  dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600">
