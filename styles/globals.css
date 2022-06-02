@@ -7,12 +7,60 @@
     @apply font-headings;
   }
 
-  :not(hr):not(.col-span-3).border-gray-300, .btn-primary-outline, .btn-primary-fill, .group, :not(span):not(img).rounded-full,
-  main.grid, .col-span-full.grid, .border {
+  .btn-primary-outline, .btn-primary-fill, .group, :not(span):not(img).rounded-full,
+  .col-span-full.grid, .border {
     @apply pixel-borders--2;
     border-width: 3px !important;
     border-radius: 11px !important;
   }
+
+  .border-white, .border-neutral-600 {
+    border-image-source: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><path d='M2 2h2v2H2zM4 0h2v2H4zM10 4h2v2h-2zM0 4h2v2H0zM6 0h2v2H6zM8 2h2v2H8zM8 8h2v2H8zM6 10h2v2H6zM0 6h2v2H0zM10 6h2v2h-2zM4 10h2v2H4zM2 8h2v2H2z' fill='%237AA3DB' /></svg>") !important;
+  }
+
+  .sun {
+    background-image: url("/sun.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @apply w-8 h-8;
+  }
+
+  .sun-dark {
+    background-image: url("/sun-white.png");
+  }
+
+  .moon {
+    background-image: url("/moon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @apply w-8 h-8;
+  }
+
+  .moon-dark {
+    background-image: url("/moon-white.png");
+  }
+
+  .audio {
+    @apply h-12 w-12;
+    background-image: url('/no-music.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+  }
+  
+  .audio.playing {
+    background-image: url('/music.png');
+  }
+  
+  .audio-dark {
+    background-image: url('/no-music-white.png');
+  }
+  
+  .audio-dark.playing {
+    background-image: url('/music-white.png');
+  }
+
+  .text-white {color: #4e86dd;}
 }
 
 .border-red {
@@ -38,23 +86,7 @@ audio::-webkit-media-controls-time-remaining-display {
 } */
 audio::-webkit-media-controls-play-button,
   audio::-webkit-media-controls-panel {
-  @apply bg-white;
-}
-
-.audio {
-  @apply h-12 w-12;
-  background-image: url('/no-music.png');
-  background-size: 30px;
-  background-repeat: no-repeat;
-  background-position: 5px;
-}
-
-.audio.playing {
-  background-image: url('/music.png');
-}
-
-.audio:hover {
-  border-color: transparent transparent transparent #404040;
+  @apply bg-white ;
 }
 
 .shadow-md { 
@@ -72,8 +104,12 @@ html, button, input, select {
   font-size: .75em;
 }
 
+.bg-[#0b131f] { 
+  background-color: #0b131f;
+}
+
 .bg-white, .bg-backdrop { 
-  background-color: #fffef3 !important;
+  background-color: #fffef3;
 }
 
 .bg-backdrop {
@@ -91,7 +127,7 @@ input[type=range] {
 
 input[type="range"]::-webkit-slider-thumb {
    -webkit-appearance: none;
-  @apply bg-black w-6 h-6 rounded-full dark:bg-white ring ring-white dark:ring-black;
+  @apply bg-[#0b131f] w-6 h-6 rounded-full dark:bg-white ring ring-white dark:ring-black;
 }
 
 model-viewer {

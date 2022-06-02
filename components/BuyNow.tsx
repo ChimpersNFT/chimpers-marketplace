@@ -191,7 +191,7 @@ const BuyNow: FC<Props> = ({
 
             execute(tokenString, taker, expectedPrice)
           }}
-          className="btn-primary-fill w-full"
+          className="btn-primary-fill w-full border dark:border-white"
         >
           {waitingTx ? (
             <CgSpinner className="h-4 w-4 animate-spin" />

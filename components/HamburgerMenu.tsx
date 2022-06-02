@@ -38,7 +38,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
         <FiMenu className="h-6 w-6" />
       </Dialog.Trigger>
 
-      <Dialog.Content className="fixed inset-0 z-10 transform bg-white shadow-md dark:bg-black">
+      <Dialog.Content className="fixed inset-0 z-10 transform bg-white shadow-md dark:bg-[#0b131f]">
         <div className="flex items-center justify-between gap-3 border-b border-neutral-300 px-6 py-4 dark:border-neutral-600">
           <NavbarLogo variant="desktop" />
           <Dialog.Close className="btn-primary-outline py-1.5 px-[5px] dark:text-white">
@@ -68,7 +68,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
             )}
             {accountData ? (
               <>
-                <div className="reservoir-label-l flex items-center justify-center border-b border-neutral-300 bg-neutral-100 p-4 text-[#4B5563] hover:text-[#1F2937] dark:border-neutral-600 dark:bg-black dark:text-white dark:hover:bg-neutral-600">
+                <div className="reservoir-label-l flex items-center justify-center border-b border-neutral-300 bg-neutral-100 p-4 text-[#4B5563] hover:text-[#1F2937] dark:border-neutral-600 dark:bg-[#0b131f] dark:text-white dark:hover:bg-neutral-600">
                   <EthAccount
                     address={accountData.address}
                     ens={{
@@ -78,7 +78,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                   />
                 </div>
 
-                <div className="reservoir-label-l flex items-center justify-between border-b border-neutral-300 p-4 text-[#4B5563] hover:text-[#1F2937] dark:border-neutral-600 dark:text-white">
+                <div className="reservoir-label-l flex items-center justify-between border-b border-neutral-300 p-4 text-[#4B5563] hover:text-[#1F2937] dark:border-neutral-600 dark:text-white dark:border-white">
                   <span>Balance </span>
                   <span>
                     {accountData.address && (
@@ -88,7 +88,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                 </div>
 
                 <Link href={`/address/${accountData.address}`}>
-                  <a className="group reservoir-label-l flex w-full cursor-pointer items-center justify-between rounded border-b border-neutral-300 p-4 text-[#4B5563] outline-none transition hover:bg-neutral-100 hover:text-[#1F2937] focus:bg-neutral-100 dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600">
+                  <a className="group reservoir-label-l flex w-full cursor-pointer items-center justify-between rounded border-b border-neutral-300 p-4 text-[#4B5563] outline-none transition hover:bg-neutral-100 hover:text-[#1F2937]  dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600">
                     My Chimpers
                   </a>
                 </Link>
@@ -96,7 +96,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                 <button
                   key={wallet.id}
                   onClick={() => disconnect()}
-                  className="group reservoir-label-l flex w-full cursor-pointer items-center justify-between gap-3 rounded border-b border-neutral-300 p-4 text-[#4B5563] outline-none transition hover:bg-neutral-100 hover:text-[#1F2937] focus:bg-neutral-100 dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600"
+                  className="group reservoir-label-l flex w-full cursor-pointer items-center justify-between gap-3 rounded border-b border-neutral-300 p-4 text-[#4B5563] outline-none transition hover:bg-neutral-100 hover:text-[#1F2937]  dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600"
                 >
                   <span>Disconnect</span>
                   <HiOutlineLogout className="h-6 w-7" />

@@ -23,7 +23,7 @@ const HeroBackground: FC<Props> = ({ banner, children }) => {
       <div className="absolute inset-0 z-0 bg-backdrop backdrop-blur-[5px] dark:bg-dark-backdrop"></div>
     </div>
   ) : (
-    <div className={`${baseClasses} bg-white dark:bg-black`}>{children}</div>
+    <div className={`${baseClasses} bg-white dark:bg-[#0b131f]`}>{children}</div>
   )
 }
 

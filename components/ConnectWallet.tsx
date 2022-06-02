@@ -14,6 +14,7 @@ import { HiOutlineLogout } from 'react-icons/hi'
 import FormatEth from './FormatEth'
 import ConnectWalletModal from './ConnectWalletModal'
 import { GlobalContext } from 'context/GlobalState'
+import ThemeSwitcher from './ThemeSwitcher'
 
 const ConnectWallet: FC = () => {
   const { data: account, isLoading } = useAccount()
@@ -30,9 +31,10 @@ const ConnectWallet: FC = () => {
 
   return (
     <div className="flex gap-2">
+      <ThemeSwitcher></ThemeSwitcher>
       {account && (
         <Link href={`/address/${account.address}`}>
-          <a className="border flex cursor-pointer items-center p-4 outline-none transition hover:bg-neutral-100 hover:text-[#1F2937] focus:bg-neutral-100 dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600">
+          <a className="border flex cursor-pointer items-center p-4 outline-none transition hover:bg-neutral-100 hover:text-[#1F2937]  dark:border-neutral-600 dark:text-white dark:hover:bg-neutral-600">
             My Chimpers 
           </a>
         </Link>
@@ -51,9 +53,9 @@ const ConnectWallet: FC = () => {
         <DropdownMenu.Content
           align="end"
           sideOffset={6}
-          className="space-y-1 px-1.5 py-2 radix-side-bottom:animate-slide-down dark:bg-neutral-900"
+          className="space-y-1 px-1.5 py-2 radix-side-bottom:animate-slide-down bg-transparent"
         >
-          <div className="group bg-white flex w-full items-center justify-between rounded px-4 py-3 outline-none transition">
+          <div className="group bg-white flex w-full items-center justify-between rounded px-4 py-3 outline-none transition dark:border-white dark:bg-[#0b131f]">
             <span>Balance </span>
             <span>
               {account.address && <Balance address={account.address} />}
@@ -66,7 +68,7 @@ const ConnectWallet: FC = () => {
                 dispatch({ type: 'CONNECT_WALLET', payload: false })
                 disconnect()
               }}
-              className="group bg-white flex w-full cursor-pointer items-center justify-between gap-3 rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+              className="group bg-white flex w-full cursor-pointer items-center justify-between gap-3 rounded px-4 py-3 outline-none transition hover:bg-neutral-100  dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 dark:border-white dark:bg-[#0b131f]"
             >
               <span>Disconnect</span>
               <HiOutlineLogout className="h-6 w-7" />

@@ -21,7 +21,7 @@ const AudioPlayer: FC = () => {
   }, false);
 
   return (
-    <button className="audio absolute z-[1000] right-9 top-7 mt-0.5 mr-1 hidden md:block border p-7"
+    <button className="audio absolute z-[1000] right-9 top-7 mt-0.5 mr-1 hidden md:block border p-7 dark:border-white dark:audio-dark"
       onClick={(e) => {
         const button = (e.target as HTMLButtonElement);
         if (button.classList.contains("playing")) {

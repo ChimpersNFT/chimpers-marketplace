@@ -30,7 +30,7 @@ const Sidebar: FC<Props> = ({ attributes, setTokensSize }) => {
               ? toggleOffItem(router, 'attribute_key')
               : toggleOnAttributeKey(router, 'attribute_key', '')
           }}
-          className={`reservoir-label-l w-full border-b-[1px] border-gray-300 px-6 py-5 text-left transition dark:border-neutral-600 dark:text-white ${
+          className={`reservoir-label-l w-full border border-b-[1px] border-gray-300 px-6 py-5 text-left transition dark:border-neutral-600 dark:text-white ${
             router.query.attribute_key &&
             router.query.attribute_key.toString() === ''
               ? 'bg-primary-100 hover:bg-primary-300 dark:hover:bg-primary-900'
@@ -47,7 +47,7 @@ const Sidebar: FC<Props> = ({ attributes, setTokensSize }) => {
           className="overflow-hidden"
         >
           <Accordion.Header
-            className={`flex w-full justify-between border-b-[1px] border-gray-300 dark:border-neutral-600 ${
+            className={`flex w-full justify-between border border-b-[1px] border-gray-300 dark:border-neutral-600 ${
               router.query.attribute_key &&
               router.query.attribute_key.toString() === attribute.key
                 ? 'divide-gray-800 dark:divide-gray-300'

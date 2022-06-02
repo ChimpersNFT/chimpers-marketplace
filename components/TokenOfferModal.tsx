@@ -234,7 +234,7 @@ const TokenOfferModal: FC<Props> = ({ env, royalties, data, setToast }) => {
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger
         disabled={isInTheWrongNetwork}
-        className="btn-primary-outline w-full dark:border-neutral-600 dark:text-white dark:ring-primary-900 dark:focus:ring-4"
+        className="btn-primary-outline w-full dark:border-white dark:text-white dark:ring-primary-900 dark:focus:ring-4"
       >
         Make Offer
       </Dialog.Trigger>

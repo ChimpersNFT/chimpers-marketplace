@@ -56,7 +56,7 @@ const PriceData: FC<Props> = ({ details, collection }) => {
 
   return (
     <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2">
-      <article className="col-span-full rounded-2xl border border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-black">
+      <article className="col-span-full rounded-2xl border border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-[#0b131f]">
         <div className="grid grid-cols-2 gap-6">
           <Price
             title="List Price"

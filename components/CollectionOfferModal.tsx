@@ -191,7 +191,7 @@ const CollectionOfferModal: FC<Props> = ({
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger
         disabled={isInTheWrongNetwork}
-        className="btn-primary-outline min-w-[222px] whitespace-nowrap border border-[#D4D4D4] bg-white text-black dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
+        className="btn-primary-outline min-w-[222px] whitespace-nowrap border bg-white text-black dark:border-[#525252] dark:bg-[#0b131f] dark:text-white dark:ring-[#525252] dark:focus:ring-4 dark:border-white"
       >
         Make a Collection Offer
       </Dialog.Trigger>
@@ -216,7 +216,7 @@ const CollectionOfferModal: FC<Props> = ({
                   }
                   execute()
                 }}
-                className="btn-primary-fill w-full  dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4"
+                className="btn-primary-fill w-full  dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4 dark:border-white"
               >
                 {waitingTx ? (
                   <CgSpinner className="h-4 w-4 animate-spin" />

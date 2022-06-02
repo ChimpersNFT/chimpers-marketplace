@@ -20,7 +20,7 @@ const Listings: FC<Props> = ({ asks }) => {
   return (
     <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2">
       <Card>
-        <div className="reservoir-h5 mb-4 font-headings dark:bg-black dark:text-white ">
+        <div className="reservoir-h5 mb-4 font-headings dark:bg-[#0b131f] dark:text-white ">
           Listings
         </div>
         <div className="max-h-96 overflow-auto rounded-2xl">
@@ -45,7 +45,7 @@ const Listings: FC<Props> = ({ asks }) => {
                 return (
                   <tr
                     key={id}
-                    className="group h-[80px] bg-white even:bg-gray-50 dark:bg-black dark:text-white  dark:even:bg-neutral-900"
+                    className="group h-[80px] bg-white even:bg-gray-50 dark:bg-[#0b131f] dark:text-white  dark:even:bg-neutral-900"
                   >
                     {/* UNIT PRICE */}
                     <td className="reservoir-h6 whitespace-nowrap px-6 py-4 font-headings dark:text-white">

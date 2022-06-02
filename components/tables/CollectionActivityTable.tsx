@@ -154,7 +154,7 @@ const CollectionActivityTableRow: FC<CollectionActivityTableRowProps> = ({
     return (
       <tr
         key={sale.id}
-        className="h-24 border-b border-gray-300 dark:border-[#525252]"
+        className="h-24 border dark:border-white"
       >
         <td className="flex flex-col gap-2">
           <div className="mt-6">
@@ -217,7 +217,7 @@ const CollectionActivityTableRow: FC<CollectionActivityTableRowProps> = ({
   return (
     <tr
       key={sale.id}
-      className="h-24 border-b border-gray-300 dark:border-[#525252]"
+      className="h-24"
     >
       <td>
         <div className="mr-2.5 flex items-center">

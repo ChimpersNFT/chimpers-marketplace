@@ -16,8 +16,8 @@ type Props = {
 
 const TokenAttributes: FC<Props> = ({ token, collection }: Props) => {
   return (
-    <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2">
-      <article className="col-span-full rounded-2xl border-[1px] border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-black">
+    <div className="border col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2 dark:border-white">
+      <article className="col-span-full rounded-2xl border-[1px] border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-[#0b131f]">
         <p className="reservoir-h5 mb-4 dark:text-white">Attributes</p>
         <div className="grid max-h-[440px] grid-cols-1 gap-2 overflow-y-auto lg:grid-cols-2">
           {token?.attributes
@@ -76,13 +76,13 @@ const TokenAttribute: FC<TokenAttributeProps> = ({
         `attributes[${attribute.key}]`
       )}=${formatUrl(`${attribute.value}`)}`}
     >
-      <a className={`rounded-lg border bg-${getColor(attribute.key)}-100 px-4 py-3 ring-inset ring-blue-600 transition-colors	hover:bg-neutral-300 focus-visible:outline-none focus-visible:ring-2 dark:bg-neutral-800 dark:hover:bg-neutral-600`}>
-        <div className="text-sm text-primary-700 dark:text-primary-300">
+      <a className={`rounded-lg border dark:border-white bg-${getColor(attribute.key)}-100 px-4 py-3 ring-inset ring-blue-600 transition-colors	hover:bg-neutral-300 focus-visible:outline-none focus-visible:ring-2`}>
+        <div className="text-sm text-primary-700">
           {attribute.key}
         </div>
-        <div className="mb-1 mt-2 flex justify-between gap-1 text-sm text-black dark:text-white">
+        <div className="mb-1 mt-2 flex justify-between gap-1 text-sm text-black">
           <span
-            className="reservoir-h6 text-black dark:text-white truncate"
+            className="reservoir-h6 text-black truncate"
             title={attribute.value}
           >
             {attribute.value}
@@ -91,7 +91,7 @@ const TokenAttribute: FC<TokenAttributeProps> = ({
             <FormatEth amount={attribute.floorAskPrice} />
           </span>
         </div>
-        <div className="flex justify-between gap-1 text-xs dark:text-neutral-300">
+        <div className="flex justify-between gap-1 text-xs text-black">
           <span>
             {formatNumber(attribute.tokenCount)} ({attributeRarity}%)
           </span>

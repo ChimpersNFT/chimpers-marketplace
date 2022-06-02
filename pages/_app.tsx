@@ -21,6 +21,7 @@ import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 import { GlobalProvider } from 'context/GlobalState'
 import AnalyticsProvider from 'components/AnalyticsProvider'
 import AudioPlayer from 'components/AudioPlayer'
+import { ThemeProvider } from 'next-themes'
 
 // Select a custom ether.js interface for connecting to a network
 // Reference = https://wagmi-xyz.vercel.app/docs/provider#provider-optional
@@ -69,12 +70,14 @@ const client = createClient({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GlobalProvider>
-      <AudioPlayer></AudioPlayer>
-      <Provider client={client}>
-        <AnalyticsProvider>
-          <Component {...pageProps} />
-        </AnalyticsProvider>
-      </Provider>
+      <ThemeProvider attribute="class">
+        <AudioPlayer></AudioPlayer>
+        <Provider client={client}>
+          <AnalyticsProvider>
+            <Component {...pageProps} />
+          </AnalyticsProvider>
+        </Provider>
+      </ThemeProvider>
     </GlobalProvider>
   )
 }

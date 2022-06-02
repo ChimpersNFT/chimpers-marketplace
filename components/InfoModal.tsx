@@ -16,7 +16,7 @@ const InfoModal: FC = () => {
           <Dialog.Content className="fixed inset-0 z-[1000] bg-[#000000b6]">
             <div className="fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform">
               <div className="px-5">
-                <div className="mx-auto rounded-2xl border border-neutral-300 bg-white py-11 shadow-xl dark:border-neutral-600 dark:bg-black md:w-[560px]">
+                <div className="mx-auto rounded-2xl border border-neutral-300 bg-white py-11 shadow-xl dark:border-neutral-600 dark:bg-[#0b131f] md:w-[560px]">
                   <div className="reservoir-body space-y-4">
                     <section>
                       <div className="mb-8 flex justify-between">

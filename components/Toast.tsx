@@ -32,7 +32,7 @@ const Toast: FC<Props> = ({ t, toast, data: { kind, message, title } }) => {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-black dark:ring-neutral-600">
+        <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-[#0b131f] dark:ring-neutral-600">
           <div className="p-4">
             <div className="flex items-start">
               <div className="flex-shrink-0">{icons[kind]}</div>
@@ -46,7 +46,7 @@ const Toast: FC<Props> = ({ t, toast, data: { kind, message, title } }) => {
               </div>
               <div className="ml-4 flex flex-shrink-0">
                 <button
-                  className="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-black dark:text-white"
+                  className="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-[#0b131f] dark:text-white"
                   onClick={() => toast.dismiss(t.id)}
                 >
                   <span className="sr-only">Close</span>

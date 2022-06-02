@@ -120,7 +120,7 @@ const Address: NextPage<Props> = ({ address, fallback }) => {
                   id={id}
                   value={id}
                   className={
-                    'group reservoir-label-l relative min-w-0 whitespace-nowrap border-b-2 border-transparent py-4  px-8 text-center hover:text-gray-700 focus:z-10 radix-state-active:border-black radix-state-active:text-gray-900 dark:text-white dark:radix-state-active:border-primary-900'
+                    'group dark:border-white reservoir-label-l relative min-w-0 whitespace-nowrap border-b-2 border-transparent py-4  px-8 text-center hover:text-gray-700 focus:z-10 radix-state-active:border-black radix-state-active:text-gray-900 dark:text-white dark:radix-state-active:border-primary-900'
                   }
                   onClick={() => toggleOnItem(router, 'tab', id)}
                 >

@@ -251,7 +251,7 @@ const ListModal: FC<Props> = ({
               setPostOnOpenSea(false)
               setOrderbook(['reservoir'])
             }}
-            className="btn-primary-fill w-full dark:ring-primary-900 dark:focus:ring-4"
+            className="btn-primary-fill w-full dark:ring-primary-900 dark:focus:ring-4 dark:border-white"
           >
             {children
               ? children

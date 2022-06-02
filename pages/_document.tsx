@@ -68,7 +68,7 @@ class MyDocument extends Document {
 
         {FONT_URL ? <link href={FONT_URL} rel="stylesheet" /> : null}
 
-        <body className="bg-white text-neutral-800 dark:bg-black dark:text-white">
+        <body className="bg-white text-neutral-800 dark:bg-[#0b131f] dark:text-white">
           <Main />
           <NextScript />
         </body>

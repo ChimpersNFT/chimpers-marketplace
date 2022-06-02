@@ -14,7 +14,7 @@ type Props = {
 
 const HeroStats: FC<{ stats: Props }> = ({ stats }) => {
   return (
-    <div className="grid min-w-full grid-cols-2 items-center gap-[1px] overflow-hidden rounded-lg border-[1px] border-gray-300 bg-white dark:border-[#525252] dark:bg-[#525252] md:m-0 md:h-[82px] md:min-w-[647px] md:grid-cols-4 md:gap-2 md:bg-white dark:md:bg-black">
+    <div className="grid min-w-full grid-cols-2 items-center gap-[1px] overflow-hidden rounded-lg border-[1px] border bg-white dark:border-white dark:bg-[#525252] md:m-0 md:h-[82px] md:min-w-[647px] md:grid-cols-4 md:gap-2 md:bg-white dark:md:bg-[#0b131f]">
       <Stat name="items">
         <h3 className="reservoir-h6 dark:text-white">
           {formatNumber(stats.count)}
@@ -42,7 +42,7 @@ const HeroStats: FC<{ stats: Props }> = ({ stats }) => {
 }
 
 const Stat: FC<{ name: string }> = ({ name, children }) => (
-  <div className="flex h-20 flex-col items-center justify-center bg-white dark:bg-black md:h-auto">
+  <div className="flex h-20 flex-col items-center justify-center bg-white dark:bg-[#0b131f] md:h-auto">
     {children}
     <p className="mt-1 text-[#A3A3A3]">{name}</p>
   </div>

@@ -68,7 +68,7 @@ const ExploreTokens: FC<Props> = ({ viewRef, attributes }) => {
                 >
                   <a
                     ref={idx === arr.length - 1 ? viewRef : null}
-                    className="flex transform-gpu flex-col rounded-[16px] border border-[#D4D4D4] bg-white p-3 transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-neutral-800 dark:bg-black dark:hover:border-neutral-600 lg:p-6"
+                    className="flex transform-gpu flex-col rounded-[16px] border border-[#D4D4D4] bg-white p-3 transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-neutral-800 dark:bg-[#0b131f] dark:hover:border-neutral-600 lg:p-6"
                   >
                     <div className="flex-grow"></div>
                     <ExploreImagesGrid
@@ -155,7 +155,7 @@ const LoadingCard = ({
 }) => (
   <div
     ref={viewRef}
-    className="grid h-[290px] animate-pulse rounded-md border border-neutral-300 bg-white dark:border-neutral-700 dark:bg-black"
+    className="grid h-[290px] animate-pulse rounded-md border border-neutral-300 bg-white dark:border-neutral-700 dark:bg-[#0b131f]"
   >
     <div className="mt-auto p-3">
       <div className="aspect-w-1 aspect-h-1 relative">

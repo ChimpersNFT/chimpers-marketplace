@@ -31,7 +31,7 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
 
   return (
     <Link href={`/${token?.token?.contract}/${token?.token?.tokenId}`}>
-      <a className="group overflow-hidden rounded-[16px] border bg-white shadow transition hover:-translate-y-0.5 hover:shadow-lg dark:border-[rgba(255,255,255,0.1)]  dark:bg-[#040404]">
+      <a className="group overflow-hidden rounded-[16px] border bg-white dark:border-white shadow transition hover:-translate-y-0.5 hover:shadow-lg dark:border-[rgba(255,255,255,0.1)]  dark:bg-[#040404]">
         {token?.token?.image && !isBroken ? (
           <img
             onError={() => setIsBroken(true)}
@@ -51,7 +51,7 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
                     250
                   )}
                   alt={`${token?.token?.collection?.name}`}
-                  className="mx-auto mb-4 h-16 w-16 overflow-hidden rounded-full border border-[rgba(255,255,255,0.2)] after:absolute after:top-0 after:bottom-0 after:left-0  after:right-0 after:rounded-full after:bg-black "
+                  className="mx-auto mb-4 h-16 w-16 overflow-hidden rounded-full border border-[rgba(255,255,255,0.2)] after:absolute after:top-0 after:bottom-0 after:left-0  after:right-0 after:rounded-full after:bg-[#0b131f] "
                   width="64"
                   height="64"
                 />
@@ -72,7 +72,7 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
         <div className="mb-1 flex border-t border-[rgba(0,0,0,0.05)] p-3 dark:border-[rgba(255,255,255,0.1)]">
           <div className="relative mr-2 h-8 w-8 overflow-hidden">
             <img
-              className="border-border-light dark: relative h-full w-full overflow-hidden rounded-full object-cover after:absolute after:top-0 after:bottom-0 after:left-0  after:right-0 after:rounded-full after:bg-black after:content-[''] dark:border-[rgba(30,30,30,1)]"
+              className="border-border-light dark: relative h-full w-full overflow-hidden rounded-full object-cover after:absolute after:top-0 after:bottom-0 after:left-0  after:right-0 after:rounded-full after:bg-[#0b131f] after:content-[''] dark:border-[rgba(30,30,30,1)]"
               src={`https://api.reservoir.tools/redirect/collections/${token?.token?.collection?.id}/image/v1`}
             />
           </div>
@@ -162,7 +162,7 @@ const Token = ({ token, modal, mutate, isOwner }: any) => {
                 setToast={modal.setToast}
                 mutate={mutate}
               >
-                <p className="hover:color-primary text-sm font-semibold opacity-0 transition-all hover:!opacity-100 group-hover:opacity-80">
+                <p className="hover:color-primary text-sm font-semibold opacity-0 transition-all hover:!opacity-100 group-hover:opacity-80 dark:border-white">
                   Accept Offer
                 </p>
               </AcceptOffer>
