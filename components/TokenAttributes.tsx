@@ -56,6 +56,7 @@ function getColor(attr: string | undefined) {
     case "eyewear": return "amber";
     case "back": return "pink";
     case "mouth": return "emerald";
+    case "trait count": return "gray";
   }
 }
 
