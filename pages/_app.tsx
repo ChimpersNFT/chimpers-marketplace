@@ -70,7 +70,7 @@ const client = createClient({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GlobalProvider>
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" defaultTheme="light">
         <AudioPlayer></AudioPlayer>
         <Provider client={client}>
           <AnalyticsProvider>
