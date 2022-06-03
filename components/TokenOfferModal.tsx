@@ -258,7 +258,7 @@ const TokenOfferModal: FC<Props> = ({ env, royalties, data, setToast }) => {
                   }
                   execute()
                 }}
-                className="btn-primary-fill w-full dark:ring-primary-900 dark:focus:ring-4"
+                className="btn-primary-fill w-full dark:ring-primary-900 dark:focus:ring-4 dark:border-white"
               >
                 {waitingTx ? (
                   <CgSpinner className="h-4 w-4 animate-spin" />

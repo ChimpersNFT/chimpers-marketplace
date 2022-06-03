@@ -220,7 +220,7 @@ const AttributeOfferModal: FC<Props> = ({
                   }
                   execute()
                 }}
-                className="btn-primary-fill w-full dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4"
+                className="btn-primary-fill w-full dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4 dark:border-white"
               >
                 {waitingTx ? (
                   <CgSpinner className="h-4 w-4 animate-spin" />
