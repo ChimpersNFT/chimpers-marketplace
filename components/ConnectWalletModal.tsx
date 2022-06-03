@@ -80,7 +80,7 @@ export const Wallets: FC = () => {
     <div className="grid">
       {connectors.map((connector) => (
         <button
-          className="rounded-2xl py-4 hover:bg-neutral-100 dark:hover:bg-neutral-900 md:rounded-none border"
+          className="rounded-2xl py-4 hover:bg-neutral-100 dark:hover:bg-neutral-900 md:rounded-none border text-left"
           disabled={!connector.ready}
           key={connector.id}
           onClick={() => connect(connector)}
