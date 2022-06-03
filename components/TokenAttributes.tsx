@@ -15,6 +15,8 @@ type Props = {
 }
 
 const TokenAttributes: FC<Props> = ({ token, collection }: Props) => {
+  if (token?.attributes?.length === 0) return null
+
   return (
     <div className="border col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2 dark:border-white">
       <article className="col-span-full rounded-2xl border-[1px] border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-[#0b131f]">

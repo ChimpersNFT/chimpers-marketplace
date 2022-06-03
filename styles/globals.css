@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .reservoir-h1, .reservoir-h2, .reservoir-h3, .reservoir-h4, .reservoir-h5, .reservoir-h6 {
-    @apply font-headings;
+@layer base {
+  input[type=range] {
+    -webkit-appearance: none;
+    @apply bg-primary-700 rounded-full h-3;
   }
 
   .btn-primary-outline, .btn-primary-fill, .group, :not(span):not(img).rounded-full,
@@ -122,14 +123,15 @@ html, button, input, select {
   text-transform: uppercase;
 }
 
-input[type=range] {
-  -webkit-appearance: none;
-  @apply bg-primary-700 rounded-full h-3;
-}
-
 input[type="range"]::-webkit-slider-thumb {
    -webkit-appearance: none;
   @apply bg-[#0b131f] w-6 h-6 rounded-full dark:bg-white ring ring-white dark:ring-black;
+}
+
+@layer components {
+  .reservoir-h1, .reservoir-h2, .reservoir-h3, .reservoir-h4, .reservoir-h5, .reservoir-h6 {
+    @apply font-headings;
+  }
 }
 
 model-viewer {

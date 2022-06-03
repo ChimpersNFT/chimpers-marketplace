@@ -1,6 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 const FONT_FAMILY = process.env.NEXT_PUBLIC_FONT_FAMILY || 'Inter'
+const BODY_FONT_FAMILY = process.env.NEXT_PUBLIC_BODY_FONT_FAMILY || 'Inter'
+const MONO_FONT_FAMILY =
+  process.env.NEXT_PUBLIC_BODY_FONT_FAMILY || 'ui-monospace'
 const PRIMARY_COLOR = process.env.NEXT_PUBLIC_PRIMARY_COLOR || 'default'
 
 const primaryColors = {
@@ -95,33 +98,54 @@ const primaryColors = {
     700: '#E0AF84',
     900: '#7E624A',
   },
-    redpink: {
+  redpink: {
     100: '#f3beca',
     300: '#e78399',
     500: '#db506e',
     700: '#d63c5e',
     900: '#c13654',
   },
-    darkpink: {
+  darkpink: {
     100: '#f6c4d4',
     300: '#ed8cab',
     500: '#e45c87',
     700: '#e04778',
     900: '#ca416c',
   },
-    redred: {
+  redred: {
     100: '#faafaf',
     300: '#f46262',
     500: '#ef1d1d',
     700: '#e00',
     900: '#d50000',
   },
-    creepzpurple: {
+  creepzpurple: {
     100: '#decaf4',
     300: '#c098ea',
     500: '#a56de0',
     700: '#9b5ddc',
     900: '#8a53c5',
+  },
+    darkpurple: {
+    100: '#cdcbfc',
+    300: '#9d98f9',
+    500: '#7069f6',
+    700: '#5F57F6',
+    900: '#544ddc',
+  },
+    zinc: {
+    100: '#f4f4f5',
+    300: '#d4d4d8',
+    500: '#71717a',
+    700: '#3f3f46',
+    900: '#18181b',
+  },
+    gray: {
+    100: '#f3f4f6',
+    300: '#d1d5db',
+    500: '#6b7280',
+    700: '#374151',
+    900: '#111827',
   },
   default: {
     100: '#F1E5FF',
@@ -149,8 +173,9 @@ module.exports = {
         '4xl': '2560px',
       },
       fontFamily: {
-        sans: [`"${FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
+        sans: [`"${BODY_FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
         headings: [`"${FONT_FAMILY}"`, ...defaultTheme.fontFamily.sans],
+        mono: [`"${MONO_FONT_FAMILY}"`, ...defaultTheme.fontFamily.mono],
       },
       keyframes: {
         'slide-down': {
