@@ -182,11 +182,11 @@ const AcceptOffer: FC<Props> = ({
           {children ? (
             children
           ) : waitingTx ? (
-            <p className="btn-primary-outline w-full dark:text-white">
+            <p className="btn-primary-outline w-full dark:text-white dark:border-white">
               <CgSpinner className="h-4 w-4 animate-spin" />
             </p>
           ) : (
-            <p className="btn-primary-outline w-full dark:text-white">
+            <p className="btn-primary-outline w-full dark:text-white dark:border-white">
               Accept Offer
             </p>
           )}
