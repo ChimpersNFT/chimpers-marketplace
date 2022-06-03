@@ -6,7 +6,7 @@ const ThemeSwitcher = () => {
     return (
         <ToggleGroup.Root
             type="single"
-            defaultValue="grid"
+            defaultValue="light"
             aria-label="Change theme"
             className="border flex divide-x-[1px] divide-[#D1D5DB] overflow-hidden rounded-[8px] border-[1px] border-[#D1D5DB] dark:divide-neutral-600 dark:border-neutral-600 md:none"
         >
