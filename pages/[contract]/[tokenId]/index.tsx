@@ -33,6 +33,7 @@ const META_OG_IMAGE = process.env.NEXT_PUBLIC_META_OG_IMAGE
 
 const COLLECTION = process.env.NEXT_PUBLIC_COLLECTION
 const COMMUNITY = process.env.NEXT_PUBLIC_COMMUNITY
+const COLLECTION_SET_ID = process.env.NEXT_PUBLIC_COLLECTION_SET_ID
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 
 type Props = {
@@ -206,10 +207,12 @@ export const getStaticProps: GetStaticProps<{
   communityId?: string
 }> = async ({ params }) => {
   const contract = params?.contract?.toString()
+  const tokenId = params?.tokenId?.toString()
 
   if (
     COLLECTION &&
     !COMMUNITY &&
+    !COLLECTION_SET_ID &&
     COLLECTION.toLowerCase() !== contract?.toLowerCase()
   ) {
     return {
@@ -228,7 +231,7 @@ export const getStaticProps: GetStaticProps<{
   const url = new URL('/tokens/details/v4', RESERVOIR_API_BASE)
 
   const query: paths['/tokens/details/v4']['get']['parameters']['query'] = {
-    tokens: [`${params?.contract?.toString()}:${params?.tokenId?.toString()}`],
+    tokens: [`${contract}:${tokenId}`],
   }
 
   const href = setParams(url, query)

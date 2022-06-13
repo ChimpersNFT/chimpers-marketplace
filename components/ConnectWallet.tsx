@@ -16,6 +16,10 @@ import ConnectWalletModal from './ConnectWalletModal'
 import { GlobalContext } from 'context/GlobalState'
 import itcher from './ThemeSwitcher'
 
+const DARK_MODE = process.env.NEXT_PUBLIC_DARK_MODE
+const DISABLE_POWERED_BY_RESERVOIR =
+  process.env.NEXT_PUBLIC_DISABLE_POWERED_BY_RESERVOIR
+
 const ConnectWallet: FC = () => {
   const { data: account, isLoading } = useAccount()
   const { data: ensAvatar } = useEnsAvatar({ addressOrName: account?.address })
@@ -73,6 +77,25 @@ const ConnectWallet: FC = () => {
               <HiOutlineLogout className="h-6 w-7" />
             </button>
           </DropdownMenu.Item>
+          {!DISABLE_POWERED_BY_RESERVOIR && (
+            <div className="group mx-auto flex w-full cursor-pointer items-center justify-center gap-3 rounded-b-2xl bg-neutral-100  py-4 px-4 outline-none  transition dark:bg-neutral-800 ">
+              <Link href="https://reservoirprotocol.github.io/">
+                <a
+                  className="reservoir-tiny flex gap-2 dark:text-white"
+                  target="_blank"
+                >
+                  Powered by{' '}
+                  <img
+                    src={
+                      !!DARK_MODE
+                        ? `/reservoir_watermark_dark.svg`
+                        : `/reservoir_watermark_light.svg`
+                    }
+                  />
+                </a>
+              </Link>
+            </div>
+          )}
         </DropdownMenu.Content>
       </DropdownMenu.Root>
     </div>

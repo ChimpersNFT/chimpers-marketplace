@@ -8,11 +8,14 @@ import 'styles/roboto.css'
 import 'styles/chalkboard.css'
 import 'styles/frankruhllibre.css'
 import 'styles/gazpacho.css'
+import 'styles/editorialnew.css'
 import 'styles/lucidagrande.css'
 import 'styles/nunitosans.css'
 import 'styles/styreneb.css'
 import 'styles/pixeled.css'
 import 'styles/gothicusroman.css'
+import 'styles/roobert.css'
+import 'styles/rodger.css'
 import type { AppProps } from 'next/app'
 import { Provider, chain, createClient, defaultChains } from 'wagmi'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
@@ -34,6 +37,9 @@ const alchemyId = process.env.NEXT_PUBLIC_ALCHEMY_ID
 
 const chains = defaultChains
 const defaultChain = chain.mainnet
+
+const THEME_SWITCHING_ENABLED = process.env.NEXT_PUBLIC_THEME_SWITCHING_ENABLED
+const DARK_MODE_ENABLED = process.env.NEXT_PUBLIC_DARK_MODE
 
 // Set up connectors
 const client = createClient({
@@ -68,6 +74,8 @@ const client = createClient({
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const defaultTheme = DARK_MODE_ENABLED ? 'dark' : 'light'
+
   return (
     <GlobalProvider>
       <ThemeProvider attribute="class" defaultTheme="light">

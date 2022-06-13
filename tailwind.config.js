@@ -14,12 +14,19 @@ const primaryColors = {
     700: '#b91c1c',
     900: '#7f1d1d',
   },
-  orange: {
+  darkorange: {
     100: '#ffedd5',
     300: '#fdba74',
     500: '#f97316',
     700: '#c2410c',
     900: '#7c2d12',
+  },
+  orange: {
+    100: '#fdccb8',
+    300: '#fa9b72',
+    500: '#f86d31',
+    700: '#f85A17',
+    900: '#df5114',
   },
   lime: {
     100: '#ecfccb',
@@ -126,21 +133,21 @@ const primaryColors = {
     700: '#9b5ddc',
     900: '#8a53c5',
   },
-    darkpurple: {
+  darkpurple: {
     100: '#cdcbfc',
     300: '#9d98f9',
     500: '#7069f6',
     700: '#5F57F6',
     900: '#544ddc',
   },
-    zinc: {
+  zinc: {
     100: '#f4f4f5',
     300: '#d4d4d8',
     500: '#71717a',
     700: '#3f3f46',
     900: '#18181b',
   },
-    gray: {
+  gray: {
     100: '#f3f4f6',
     300: '#d1d5db',
     500: '#6b7280',
