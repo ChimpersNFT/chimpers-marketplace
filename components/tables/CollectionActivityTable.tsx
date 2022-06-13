@@ -39,7 +39,7 @@ const CollectionActivityTable: FC<Props> = ({ collection }) => {
 
   return (
     <>
-      <table>
+      <table className="w-full">
         {!isMobile && !noSales && (
           <thead>
             <tr className="text-left">
