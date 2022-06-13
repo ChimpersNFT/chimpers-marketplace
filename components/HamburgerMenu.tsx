@@ -79,7 +79,7 @@ const HamburgerMenu: FC<Props> = ({ externalLinks }) => {
                 </div>
               )}
 
-            <ThemeSwitcher></ThemeSwitcher>
+            <ThemeSwitcher />
 
 
             {accountData ? (

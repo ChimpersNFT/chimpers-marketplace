@@ -118,9 +118,8 @@ const Navbar: FC = () => {
       </div>
       <HamburgerMenu externalLinks={externalLinks} />
       <div className="z-10 ml-auto hidden shrink-0 md:flex gap-2">
-        <ThemeSwitcher></ThemeSwitcher>
-        <ConnectWallet />
         <ThemeSwitcher />
+        <ConnectWallet />
       </div>
     </nav>
   )
