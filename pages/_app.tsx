@@ -25,6 +25,7 @@ import { GlobalProvider } from 'context/GlobalState'
 import AnalyticsProvider from 'components/AnalyticsProvider'
 import AudioPlayer from 'components/AudioPlayer'
 import { ThemeProvider } from 'next-themes'
+import { ReservoirSDK } from '@reservoir0x/client-sdk'
 
 // Select a custom ether.js interface for connecting to a network
 // Reference = https://wagmi-xyz.vercel.app/docs/provider#provider-optional
@@ -40,6 +41,7 @@ const defaultChain = chain.mainnet
 
 const THEME_SWITCHING_ENABLED = process.env.NEXT_PUBLIC_THEME_SWITCHING_ENABLED
 const DARK_MODE_ENABLED = process.env.NEXT_PUBLIC_DARK_MODE
+const RESERVOIR_API_BASE = process.env.NEXT_PUBLIC_RESERVOIR_API_BASE
 
 // Set up connectors
 const client = createClient({
@@ -71,6 +73,10 @@ const client = createClient({
       }),
     ]
   },
+})
+
+ReservoirSDK.init({
+  apiBase: RESERVOIR_API_BASE ? RESERVOIR_API_BASE : '',
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
