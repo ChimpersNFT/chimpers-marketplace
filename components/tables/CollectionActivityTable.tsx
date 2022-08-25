@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { useMediaQuery } from '@react-hookz/web'
 import LoadingIcon from 'components/LoadingIcon'
 import { FiExternalLink } from 'react-icons/fi'
+import cloudflareLoader from 'lib/cloudflareLoader'
 
 const SOURCE_ID = process.env.NEXT_PUBLIC_SOURCE_ID
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
@@ -177,7 +178,7 @@ const CollectionActivityTableRow: FC<CollectionActivityTableRowProps> = ({
             <a className="flex items-center">
               <Image
                 className="rounded object-cover"
-                loader={({ src }) => src}
+                loader={cloudflareLoader}
                 src={imageSrc}
                 alt={`${sale.token?.name} Token Image`}
                 width={48}
@@ -250,7 +251,7 @@ const CollectionActivityTableRow: FC<CollectionActivityTableRowProps> = ({
           <a className="mr-2.5 flex items-center">
             <Image
               className="rounded object-cover"
-              loader={({ src }) => src}
+              loader={cloudflareLoader}
               src={imageSrc}
               alt={`${sale.token?.name} Token Image`}
               width={48}

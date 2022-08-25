@@ -9,6 +9,7 @@ import { FC } from 'react'
 import { SWRInfiniteResponse } from 'swr/infinite/dist/infinite'
 import ExploreTable from './ExploreTable'
 import FormatEth from './FormatEth'
+import cloudflareLoader from 'lib/cloudflareLoader';
 
 type Props = {
   viewRef: (node?: Element | null | undefined) => void
@@ -196,7 +197,7 @@ const ExploreImagesGrid = ({
         {sample_images.length > 1 ? (
           // SMALLER IMAGE, HAS SIDE IMAGES
           <Image
-            loader={({ src }) => src}
+            loader={cloudflareLoader}
             src={optimizeImage(
               sample_images[0],
               window?.innerWidth < 639
@@ -219,7 +220,7 @@ const ExploreImagesGrid = ({
           />
         ) : (
           <Image
-            loader={({ src }) => src}
+            loader={cloudflareLoader}
             src={optimizeImage(
               sample_images[0],
               window?.innerWidth < 639
@@ -246,7 +247,7 @@ const ExploreImagesGrid = ({
             {sample_images.slice(1).map((image) => (
               <Image
                 key={image}
-                loader={({ src }) => src}
+                loader={cloudflareLoader}
                 src={optimizeImage(
                   image,
                   window?.innerWidth < 639

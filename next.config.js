@@ -4,6 +4,9 @@ const nextConfig = {
   api: {
     bodyParser: false,
   },
+  images: {
+    loader: 'custom'
+  }
 }
 
 module.exports = nextConfig
