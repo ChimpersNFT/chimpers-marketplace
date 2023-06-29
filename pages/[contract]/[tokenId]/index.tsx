@@ -36,6 +36,8 @@ const COMMUNITY = process.env.NEXT_PUBLIC_COMMUNITY
 const COLLECTION_SET_ID = process.env.NEXT_PUBLIC_COLLECTION_SET_ID
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 
+const OPENSEA_API_KEY = process.env.NEXT_PUBLIC_OPENSEA_API_KEY
+
 type Props = {
   collectionId: string
   tokenDetails?: TokenDetails
@@ -102,7 +104,17 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
     async function getOpenSeaData(url: URL) {
       let result: any = { animation_url: null, extension: null }
       try {
-        const res = await fetch(url.href)
+        const options: RequestInit | undefined = {
+          method: "GET",
+        }
+    
+        const headers = new Headers()
+    
+        if (OPENSEA_API_KEY) headers.set('x-api-key', OPENSEA_API_KEY)
+
+        options.headers = headers
+
+        const res = await fetch(url.href, options)
         const json = await res.json()
 
         setBannedOnOpenSea(!json?.supports_wyvern)
