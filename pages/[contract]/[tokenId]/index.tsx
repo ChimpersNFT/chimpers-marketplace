@@ -111,6 +111,7 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
         const headers = new Headers()
     
         if (OPENSEA_API_KEY) headers.set('x-api-key', OPENSEA_API_KEY)
+        console.log("x", OPENSEA_API_KEY)
 
         options.headers = headers
 
